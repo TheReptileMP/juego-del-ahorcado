@@ -5,25 +5,63 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <title>Juego del Ahorcado</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
 
     </head>
 
 
     <body>
         <header>
-
+            <h1><img class="logo" src="imagenes/logo-alura.png"></h1>
         </header>
 
-
         <main>
-        
+            <section class="menu-principal" id="menu-principal">
+                <div class="caja-botones">
+                    <button class="btn-style" id="btn-comenzar-partida">Nuevo juego</button>
+                    <button class="btn-style" id="btn-agregar-palabra">Agregar palabra</button>
+                    <button class="btn-style" id="btn-reglas">¿Cómo jugar?</button>
+                </div>
+            </section>
+            <section class="caja-tablero" id="caja-tablero">
+                <canvas width="800" height="400" class="tablero" id="tablero"></canvas>
+            </section>
+            <section class="agregar-palabra" id="agregar-palabra">
+                <input id="input-palabra" type="text" placeholder="Ingrese la nueva palabra">
+            </section>
+            <section class="reglas" id="reglas">
+                <h1 class="texto-reglas" id="titulo-reglas">El juego del ahorcado</h1>
+                <h2 class="texto-reglas" id="subtitulo-reglas">¿Cómo Jugar?:</h2>
+                <label class="texto-reglas">El juego se basa en tratar de adivinar una palabra escogida al azar. Partiendo desde el inicio sabremos con los guiones,
+                     la cantidad de letras que esta contiene.</label>
+                <label class="texto-reglas">Escoja sus letras cuidadosamente, ya que tiene un máximo de 8 intentos erróneos (8 oportunidades de equivocarse).</label>
+                <label class="texto-reglas">Por cada error se comenzará a dibujar una horca, si se alcanzan los 8 errores, usted habrá perdido.</label>
+                <label class="texto-reglas">En caso de adivinar la palabra secreta antes de llegar a 8 errores, usted habrá ganado.</label>
+                <label class="texto-reglas">Puede agregar nuevas palabras que se agregaran a la lista de palabras disponibles en el juego utilizando dicha opción en el menú principal.</label>
+                <label class="texto-reglas">Desafíe a sus amigos a ver quién adivina primero las palabras secretas, y no olvide divertirse!</label>
+            </section>
+            <div class="caja-opciones" id="caja-opciones">
+                <button class="btn-style" id="btn-1"></button>
+                <button class="btn-style" id="btn-2"></button>
+            </div>
+            
+
 
 
         </main>
 
 
         <footer>
-
+            <div class="texto-footer">
+                <p id="copyright">&copy Copyright Juego del Ahorcado - 2022</p>
+                <p id="autor">Desarrollado por Giuliano Stilo</p>
+            </div>
+            <div class="logos-contacto">
+                <a href="https://github.com/TheReptileMP"><img id="logo-git" src="imagenes/github.png"></a>
+                <a href="https://www.linkedin.com/in/giuliano-stilo"><img id="logo-linkedin" src="imagenes/linkedin.png"></a>
+            </div>
 
         </footer>
 
@@ -32,5 +70,6 @@
 
 
 
-
+    <script type="text/javascript" src="script.js">
+    </script>
 </html>
